@@ -1,2 +1,0 @@
-# BankingSystemApp
-introduction to java

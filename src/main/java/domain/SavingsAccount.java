@@ -9,4 +9,8 @@ public class SavingsAccount extends BankAccount{
     private double calculateInterest(){
         return getBalance()*interestRate/100;
     }
+    @Override
+    public void displayAccountInfo(){
+        System.out.println("Account number: "+getAccountNumber()+", balance: "+getBalance()+", owner: "+getOwner().getName()+", interest rate: "+interestRate);
+    }
 }

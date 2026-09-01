@@ -1,5 +1,9 @@
 package domain;
 
+import java.util.Locale;
+
+import static java.lang.Character.toLowerCase;
+
 public class Person {
     private String name;
     private int age;
@@ -39,6 +43,24 @@ public class Person {
     }
 
     public void introduce(){
-        System.out.println("This is "+name+", being "+age+" years old, with email "+email);
+
+        System.out.println("This is "+name.toUpperCase()+", being "+age+" years old, with email "+email.toLowerCase());
+    }
+
+    public boolean hasValidEmail(){
+        if(email==null)
+            return false;
+        String normalizedEmail=email.trim().toLowerCase();
+        if(!normalizedEmail.contains("@"))
+            return false;
+        if(!normalizedEmail.contains("."))
+            return false;
+        if(normalizedEmail.startsWith("@"))
+            return false;
+        if(normalizedEmail.endsWith("@"))
+            return false;
+        if(normalizedEmail.endsWith("."))
+            return false;
+        return true;
     }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Customer extends Person {
     private int customerId; // private for encapsulation
-    private List<BankAccount> accountsList;
+    private List<BankAccount> accountsList; // association (bank account can't exist without a customer), one-to-many (customer can have more accounts)
     public Customer(String name,int age,String email,int customerId){
         super(name,age,email);
         this.customerId=customerId;
@@ -24,7 +24,8 @@ public class Customer extends Person {
     }
     public void showAccounts(){
         for(BankAccount account:accountsList){
-            System.out.println("Account: "+account.getAccountNumber()+", balance: "+account.getBalance());
+            account.displayAccountInfo();
+            //System.out.println("Account: "+account.getAccountNumber()+", balance: "+account.getBalance());
         }
     }
 }

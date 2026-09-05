@@ -2,7 +2,7 @@ package domain;
 
 public class CurrentAccount extends BankAccount{
     private double overdraftLimit;
-    public String description;
+    //public String description;
     public CurrentAccount(int accountNumber,double balance, Customer owner, double overdraftLimit){
         super(accountNumber,balance,owner);
         this.overdraftLimit=overdraftLimit;

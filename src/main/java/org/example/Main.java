@@ -31,6 +31,7 @@ public class Main {
         b1.addCustomer(c1);
         b1.displayCustomers();
 
+
         System.out.println();
         System.out.println("Display customers with their accounts (after adding customer + "+c1.getName()+")+ for: "+b1.name);
         b1.displayCustomers();
@@ -44,5 +45,7 @@ public class Main {
         b1.addAccount(current1);
         System.out.println("Display customers with their accounts (after adding all accounts) for: "+b1.name);
         b1.displayCustomers();
+
+        Person person=new Person();
     }
 }

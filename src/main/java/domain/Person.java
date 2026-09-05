@@ -9,7 +9,7 @@ public class Person {
     private int age;
     private String email;
 
-    Person(){
+    public Person(){
 
     }
     public Person(String name, int age, String email){
@@ -43,7 +43,6 @@ public class Person {
     }
 
     public void introduce(){
-
         System.out.println("This is "+name.toUpperCase()+", being "+age+" years old, with email "+email.toLowerCase());
     }
 
